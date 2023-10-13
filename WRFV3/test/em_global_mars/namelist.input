@@ -1,0 +1,61 @@
+ &time_control
+ run_days                            = 1,
+ run_hours                           = 0,
+ run_minutes                         = 0,
+ run_seconds                         = 0,
+ start_year                          = 0001,
+ start_day                           = 01,
+ start_hour                          = 00,
+ start_minute                        = 00,
+ start_second                        = 00,
+ end_year                            = 0001,
+ end_day                             = 02,
+ end_hour                            = 00,
+ end_minute                          = 00,
+ end_second                          = 00,
+ input_from_file                     = .true. ,
+ history_interval                    = 60,
+ restart_interval                    = 43200,
+ frames_per_outfile                  = 48,
+ io_form_history                     = 2
+ io_form_restart                     = 2
+ io_form_input                       = 2
+ io_form_boundary                    = 2
+ /
+
+ &domains
+ time_step                           = 180,
+ max_dom                             = 1,
+ e_we                                = 73,
+ e_sn                                = 37,
+ e_vert                              = 21,
+ dx                                  = 295826.34375,
+ dy                                  = 295826.34375,
+ ztop                                = 120000,
+ /
+
+ &physics
+ ra_lw_physics                       = 41,
+ radt                                = 0,
+ /
+
+ &dynamics
+ km_opt                              = 4,
+ non_hydrostatic                     = .false.,
+ time_step_sound                     = 4,
+ polar_filter                        = .true.,
+ base_pres                           = 610.,
+ base_temp                           = 230.,
+ base_lapse                          = 15.4,
+ iso_temp                            = 130.,
+ /
+
+ &bdy_control
+ periodic_x                          = .true. ,
+ polar                               = .true. ,
+ /
+
+ &namelist_quilt
+ nio_tasks_per_group = 0,
+ nio_groups = 1,
+ /
